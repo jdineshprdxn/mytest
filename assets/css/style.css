@@ -1,0 +1,862 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Container/ .container
+  3. Header    
+  4. Content / .content   
+  5. Footer  
+  6. Search 2
+  7. Search 3
+  8. Search 5
+  9. add article 1
+  10. add article 4
+  11. add article 2
+  12. pop-up
+  13. Metric
+  14. Chart
+  15. sample-Metric
+  16. visuals
+    
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+   header: #fff;
+  .plos-details a: #fff;
+  .form-content > p,
+  .form-content form input[type="text"],
+  .form-content form select,
+  .find-articles h3: #333;
+  .form-content form label: #999;
+  .form-content form input[type="button"]: #fff;
+  .search-article > a: #3c63af;
+  .find-articles div: #fff;
+  .dates: #ccc;
+  .ambra-managed-colocation li a,
+  .ambra-managed-colocation li span: #ccc;
+   footer: #fff;
+  .footer-wrapper p: #ccc;
+  .journals-content h3,
+  .journals-content h4 : #fff;
+  .search-2 div span: #9f9f9f;
+   search-3-error-msg span: #e53350;
+  .search-3-error-msg span strong: #c27e86;
+   form-content-search-4 form input[class="start-date"],
+  .form-content-search-4 form input[class="end-date"]: #7d7d7d;
+  .form-content-search-4 form input[class="start-date"]+span: #999;
+  .form-content.add-article-1-form .options li: #3c63af;
+  .form-content.add-article-1-form .options li a: #3c63af;
+  .sorting select: #333;
+  .find-add-article-1 ul li: #3c63af;
+  .selected-articles: #858585;
+  .selected: #fb8903;
+  .preview-articles h3: #3c63af;
+  .welcome-back h4: #fff;
+  .chart-wrapper h4: #333;
+  .chart-wrapper .sample-chart-description: #666;
+  .chart-wrapper h5: #000;
+  .chart-description: #4d4d4d;
+  .published-articles: #9c9c9c;
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  
+  .futura-bold-font: bold 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  .albert-light-normal: normal "FS Albert Web Regular", Verdana , sans-serif;
+  .albert-light-italic: italic "FS Albert Web Italic", Verdana , sans-serif;
+  .albert-bold-normal: bold "FS Albert Web Bold", Verdana , sans-serif;
+  .albert-bold-italic: bold italic "FS Albert Web Bold Italic", Verdana , sans-serif;
+  .article-list: bold Arial;
+  .article-list span: 32px;
+  .article-list span:first-child: 14px;
+  .header-wrapper .main-nav li span: 22 bold Arial, Helvetica, sans-serif;
+  .form-content form label: 18px bold Arial, Helvetica, sans-serif;
+  .form-content form input[type="text"],
+  .form-content form select: 18px;
+  .form-content form input[type="button"]: 15px bold Arial, Helvetica, sans-serif;
+  .search-article > a: 15px;
+  .find-articles h3,
+  .find-articles div,
+  .browse-articles > p: 26px;
+  .best-artcles li span: 14px bold Arial, Helvetica, sans-serif;
+  .sample-reports-description > div: 12px "FS Albert Web Regular", Verdana , sans-serif;
+  footer,
+  .footer-wrapper p: 12px Arial, Helvetica, sans-serif;
+  .pagination > ul li,
+  .add-article-2-wrapper .article-description > span,
+  .welcome-back h4: 14px bold Arial, Helvetica, sans-serif;
+  .welcome-back input: 16px bold Arial, Helvetica, sans-serif;
+  .downloads h4: 22px;
+  download-information ul li ul li ul li: 12px;
+  .download-information ul li ul li ul li:first-child: bold 15px;
+  .downloads .share input: bold 18px;
+  .chart-wrapper h4: 26px;
+  .chart-wrapper .sample-chart-description: 14px;
+  .chart-wrapper h5: 26px;
+  .articles-info ul li,
+  .citations-description ul li,
+  .chart-description,
+  .published-articles: 14px;  
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* ==========================================================================
+    2. Container
+   ========================================================================== */
+.container { 
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial;
+}
+
+a { 
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li { list-style-type: none; }
+
+/* ==========================================================================
+    3. Header
+   ========================================================================== */  
+header {
+  width: 100%;
+  background: #333;
+  color: #fff;
+}
+
+.header-wrapper-1 {
+  background: #1e1e1e;
+  width: 100%
+}
+
+.header-content-1,
+.header-content-2,
+.header-content-3,
+.header-content-4 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.header-content-1 nav ul li {
+  display: inline-block;
+  float: left;
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.header-content-1 nav ul li a { 
+  float: left;
+  color: #818181;  
+}
+
+.header-content-1 nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.header-content-1 nav ul li span {
+  width: 2px;
+  height: 11px;
+  margin: 2px 17px 0 17px;
+  display: inline-block;
+  float: left;
+  background: url(../images/header-separator.png);
+}
+
+.header-content-1 .search {
+  position: relative;
+  float: left;
+}
+
+.header-content-1 .search input {
+  width: 240px;  
+  border: 0;
+  padding: 8px 0 8px 9px;
+  margin: 0 0 0 39px;
+  background: #505050;
+  color: #bababa;
+  font-size: 11px;
+}
+
+.header-content-1 .search span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  right: 6px;
+  top: 9px;
+  cursor: pointer;
+  background: url(../images/search.png) no-repeat;
+}
+
+.header-content-1 nav {
+  margin: 0 0 0 201px;
+  padding: 8px 0 0;
+  float: left;
+}
+
+.header-wrapper-2 {
+  width: 100%;
+  background: #000;  
+}
+
+.header-wrapper-2 h1 {
+  width: 149px;
+  height: 36px;
+  margin: 22px 83px 22px 0;
+  float: left;
+  text-indent: -9999px;
+  background: url(../images/dtcc-logo.png);
+}
+
+.header-wrapper-2 h1 a {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.header-wrapper-2 nav ul li {
+  width: 76px;
+  display: inline-block;
+  font-size: 16px;
+  float: left;
+}
+
+.header-wrapper-2 nav ul li a:hover {
+  text-decoration: underline
+}
+
+.header-wrapper-2 nav ul .settlement { 
+  margin: 0 42px 0 0;
+  width: 117px;
+}
+
+.header-wrapper-2 nav ul .investment { 
+  margin: 0 47px 0 0;
+  width: 127px;
+}
+
+.header-wrapper-2 nav ul .data { width: 145px; }
+
+.header-wrapper-2 nav ul .data span { display: block; }
+
+.header-content-2 > nav {
+  margin: 21px 0 0;
+}
+
+.innovation {
+  margin: 0 52px 0 0;
+}
+
+.clearing {
+  margin: 0 40px 0 0;
+}
+
+.header-wrapper-3 {
+  width: 100%;
+  height: 83px;
+  background: url(../images/black-background.jpg);
+}
+
+.header-wrapper-3 .header-content-3 h2 {
+  margin: 0 0 0 17px;
+  padding: 17px 0 0 0;
+  text-transform: uppercase;
+  font-size: 38px;
+  color: #fafafa;
+}
+
+.header-wrapper-4 {
+  width: 100%;
+  background: #000;
+}
+
+.header-wrapper-4 .first-nav,
+.header-wrapper-4 a { float: left; }
+
+.header-wrapper-4 .second-nav { float: right; }
+
+.header-wrapper-4 .first-nav ul li {  
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-wrapper-4 .first-nav ul li span {
+  width: 5px;
+  height: 12px;
+  margin: 4px 0 0 9px;
+  display: inline-block;
+  float: left;
+  background: url(../images/first-nav-seperator.png);
+}
+
+.header-wrapper-4 .second-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.header-wrapper-4 .first-nav ul li:first-child a:hover {
+  color: #0498d4;
+}
+
+.header-wrapper-4 .first-nav ul li:first-child a {
+  color: #959595;
+}
+
+.header-wrapper-4 .first-nav ul li a {
+  color: #0498d4;
+}
+
+.header-wrapper-4 .second-nav ul li span {
+  width: 1px;
+  height: 20px;
+  margin: 0 15px 0 20px;
+  display: inline-block;
+  float: left;
+  background: url(../images/second-nav-seperator.jpg);
+}
+
+.header-wrapper-4 .second-nav ul li {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header-content-4 {
+  padding: 18px 0 16px 0;
+}
+
+/* ==========================================================================
+    4. Content
+   ========================================================================== */ 
+.content {
+  width: 100%;
+}
+
+.form-content {
+  width: 960px;
+  margin: 0 auto;
+  padding: 35px 0 34px 0;
+}
+
+.form-wrapper {
+  width: 100%;
+  background: #fafafa;
+}
+
+
+.form-wrapper form ul li {
+  float: left;
+}
+
+.form-wrapper form ul li select {
+  width: 212px;
+  height: 32.5px;
+  padding: 5px 0 6px 7px;
+  margin: 0 27px 0 0;
+  border: 2px solid #d9d9d9;
+  background: #fafafa;
+  color: #c3c3c3;
+  cursor: pointer;
+}
+
+
+.content-wrapper-1 {
+  width: 100%;
+  margin: -2px 0 0;
+  background: #f5f5f5;
+}
+
+.content-wrapper-1 .content-1 {
+  width: 960px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  bottom: 3px;
+  background: url(../images/lowest-fee-image.jpg);
+}
+
+.content-wrapper-1 .content-1 h3 {
+  width: 374px;
+  font-size: 49px;
+  color: #fffefe;
+  text-transform: uppercase;
+  line-height: 52px;
+}
+
+.content-wrapper-1 .content-1 p {
+  width: 395px;
+  margin: 14px 0 0;
+  padding: 0 0 0 3px;
+  line-height: 25px;
+  font-style: italic;
+  font-size: 21px;
+  color: #fffefe;
+}
+
+.content-wrapper-1 .fee-description {
+  margin: 41px 120px 0 0;
+  width: 383px;
+  float: right;
+}
+
+.form-shadow {
+  width: 100%;
+  height: 5px;
+  background: url(../images/shadow.png) repeat-x;
+}
+
+.content-wrapper-2 {
+  width: 100%;
+  padding: 0 0 35px;
+  background: #f5f5f5;
+}
+
+.content-wrapper-2 .content-2 {
+  width: 960px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.content-wrapper-2 .description .membership-content h4 {
+  margin: 0 0 9px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #1e1d1d;
+}
+
+.content-wrapper-2 .description .membership-content p {
+  width: 587px;
+  font-size: 14px;
+  color: #898989;
+  line-height: 21px;
+}
+
+.content-wrapper-2 .description .membership-content span,
+.content-wrapper-2 .description .membership-content span a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #959595;
+}
+
+.content-wrapper-2 .description .membership-content span {
+  margin: 10px 0 0 0;
+  display: block;
+}
+
+.content-wrapper-2 .description .membership-content span a {
+  text-decoration: underline;
+}
+
+.membership-content {
+  width: 592px;
+  margin: 29px 0 0 30px;
+  float: left;
+}
+
+.seperator-1 {
+  width: 1px;
+  height: 215px;
+  margin: 36px 30px 0 35px;
+  display: inline-block;
+  float: left;
+  background: url(../images/separator-1.png);
+}
+
+.content-wrapper-2 .questioning .prequalify a {
+  width: 215px;
+  padding: 10px 0 10px 9px;
+  margin: 12px 0 0 0;
+  display: block;
+  font-size: 16px;
+  background: #fd3c0f;
+}
+
+.content-wrapper-2 .questioning .prequalify a:hover {
+  background: #000;
+}
+
+.content-wrapper-2 .questioning .prequalify a span {
+  width: 13px;
+  height: 12px;
+  margin: 0 0 0 11px;
+  display: inline-block;
+  background: url(../images/question-arrow.png);
+}
+
+.content-wrapper-2 .questioning .qualify a span {
+  margin: 0 0 0 17px;
+}
+
+.content-wrapper-2 .questioning .qualify {
+  margin: 27px 0 0;
+}
+
+.content-wrapper-2 .questioning .prequalify p {
+  width: 225px;
+  font-style: italic;
+  font-size: 17px;
+  color: #333;
+}
+
+.content-wrapper-2 .questioning .prequalify {
+  width: 228px;
+  margin: 31px 0 0;
+}
+.content-wrapper-2 .questioning {
+  width: 228px;
+  float: left;
+}
+
+.seperator-2 {
+  width: 899px;
+  height: 1px;
+  margin: 20px 0 0 29px;
+  display: inline-block;
+  background:url(../images/bottom-seperator.png);
+}
+
+.directories-content .directories {
+  margin: 0 0 0 66px;
+}
+
+.directories-content .directories a:first-child {
+  margin: 35px 0 10px 0;
+}
+
+.directories-content .directories a {
+  width: 198px;
+  height: 36px;
+  padding: 14px 0 0 14px;
+  margin: 0 0 10px 0;
+  display: block;
+  font-size: 17px;
+  color: #1e1d1d;
+  text-transform: uppercase;
+  background: url(../images/nscc-directories.jpg) no-repeat;
+}
+
+.directories-content .directories a:hover {
+  background: #f0f0f0;
+}
+
+
+.directories-content .directories a span {
+  width: 14px;
+  height: 23px;
+  margin: -1px 9px 0 0;
+  display: inline-block;
+  float: right;
+  background: url(../images/blue-arrow.png);
+}
+
+.faqs {
+  padding: 0 0 49px;
+}
+
+.tool-content {
+  width: 250px;
+  margin: 32px 23px 0 0;
+  float: right;   
+}
+
+.tool-content li {    
+  width: 261px;
+  margin: 0 0 7px;
+  font-weight: bold;
+  font-size: 14px;
+  float: left;
+  color: #000;
+}
+
+.footer-wrapper-1 {
+  background: #fafafa;
+}
+
+.footer-content-1 {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info h5 {
+  margin: 0 0 14px 0;
+  font-size: 21px;
+  color: #1e1d1d;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info ul li:first-child {
+  margin: 0 0 4px;
+  font-weight: bold;
+  color: #242424;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info ul li {
+  font-size: 14px;
+  color: #898989;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info a {
+  margin: 18px 0 0;
+  padding: 10px 0 10px 9px;
+  width: 220px;  
+  display: block;
+  color: #fff;
+  background: #fd3c0f;
+  font-size: 16px;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info a:hover {
+  background: #000;
+}
+
+.footer-wrapper-1 .footer-content-1 .contact-info a span {
+  height: 12px;
+  margin: 0 0 0 4px;
+  width: 13px;  
+  display: inline-block;
+  background: url(../images/question-arrow.png) no-repeat;
+}
+
+.contact-info {
+  width: 249px;
+  padding: 28px 0 0 0;
+  float: left;
+}
+
+.service-1,
+.service-2 {
+  margin: 0 0 13px;
+}
+
+.footer-wrapper-1 .learning-content {
+  width: 516px;
+  margin: 24px 0 0 78px;
+  float: left;
+}
+
+.footer-wrapper-1 .learning-content h5 {
+  height: 46px;
+  width: 257px; 
+  text-indent: -9999px;
+  background: url(../images/dtcc-learning-logo.png) no-repeat;
+}
+
+
+.footer-wrapper-1 .learning-content h5 a {  
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.footer-wrapper-1 .learning-content p {
+  margin: 34px 0 0;
+  font-size: 14px;
+  color: #898989;
+  line-height: 21px;
+}
+
+.active-menu {
+  width: 960px;
+  padding: 9px 0 8px 10px;
+  margin: 29px 0 0 0;
+  float: left;
+  background: #333;
+}
+
+.active-menu ul,
+.active-menu span,
+.active-menu .corporate,
+.active-menu p {
+  float: left;
+}
+
+.active-menu ul li {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+
+.active-menu ul li:first-child {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.active-menu p {
+  padding: 9px 0 0;
+  font-size: 16.4px;
+  color: #fff;
+}
+
+.active-menu .footer-sepeartor {
+  width: 1px;
+  height: 30px;
+  margin: 3px 11px 0 17px;
+  display: inline-block;
+  background: url(../images/footer-separator.png) no-repeat;
+}
+
+.active-menu .corporate select {
+  width: 285px;
+  border: 0;
+  padding: 5px 0 4px 10px;
+  margin: 6px 0 0 38px;
+  height: 30px;
+  font-size: 15px;
+  color: #333;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.footer-wrapper-2 {
+  width: 100%;
+  background: #1c1c1c;
+}
+
+.footer-content-2 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.footer-content-2 nav ul li {
+  display: inline-block;
+  float: left;
+  background: #383838;
+}
+
+.footer-content-2 nav ul li a {
+  padding: 11px 0 12px;
+  margin: 0 1px 0 0;
+  width: 155px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  font-size: 12px;
+  background: #1c1c1c;
+}
+
+.footer-content-2 nav ul li:first-child a {
+  width: 180px;
+}
+
+.footer-content-2 nav ul li .businesses span {
+  display: block;
+}
+
+.footer-content-2 nav ul li .businesses {
+  padding: 7px 0 9px;
+  line-height: 12px;
+}
+
+.footer-content-2 nav ul li .privacy {
+  margin: 0;
+}
+
+.footer-content-2 nav ul li .selected {
+  background: #333;
+}
+
+.footer-content-2 nav ul li a:hover {
+  background: #333;
+}
+
+.footer-content-2 nav ul li .selected span {
+  width: 7px;
+  height: 7px;
+  margin: 0 0 0 21px;
+  display: inline-block;
+  background: url(../images/close.png);
+}
+
+
+
